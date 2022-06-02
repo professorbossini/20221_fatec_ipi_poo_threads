@@ -1,10 +1,11 @@
 public class TesteCorredor {
     public static void main(String[] args) {
-        Thread thread1 = new Thread(new Corredor(), "guloso");
-        Thread thread2 = new Thread (new Corredor(), "pedrinho");
-        Thread thread3 = new Thread(new Corredor(), "rafael santana");
-        Thread thread4 = new Thread (new Corredor(), "jpfatec");
-        Thread thread5 = new Thread(new Corredor(), "andre");
+        Thread t = Thread.currentThread();
+        Thread thread1 = new Thread(new Corredor(t), "guloso");
+        Thread thread2 = new Thread (new Corredor(t), "pedrinho");
+        Thread thread3 = new Thread(new Corredor(t), "rafael santana");
+        Thread thread4 = new Thread (new Corredor(t), "jpfatec");
+        Thread thread5 = new Thread(new Corredor(t), "andre");
 
         thread1.start();
         thread2.start();
