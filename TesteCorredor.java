@@ -12,5 +12,11 @@ public class TesteCorredor {
         thread3.start();
         thread4.start();
         thread5.start();
+
+        System.out.println("Começou");
+        
+        
+        //resolver o problema "acabou"
+        System.out.println("Acabou");
     }
 }
